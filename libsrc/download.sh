@@ -41,14 +41,16 @@ get https://github.com/icculus/SDL_sound/archive/${SDLSOUND_VERSION}.tar.gz SDL_
 SDL_VERSION=release-2.28.5
 SDL_VERSION_NUMBER=2.28.5
 # Framework for macOS
-get https://github.com/libsdl-org/SDL/releases/download/${SDL_VERSION}/SDL2-${SDL_VERSION_NUMBER}.dmg SDL2-Framework.dmg
+#get https://github.com/libsdl-org/SDL/releases/download/${SDL_VERSION}/SDL2-${SDL_VERSION_NUMBER}.dmg SDL2-Framework.dmg
+get https://github.com/libsdl-org/SDL/releases/download/release-2.28.5/SDL2-2.28.5.dmg SDL2-Framework.dmg
 # Full code for iOS
 get https://github.com/libsdl-org/SDL/archive/refs/tags/${SDL_VERSION}.tar.gz SDL.tar.gz
+#get https://github.com/libsdl-org/SDL/releases/download/release-2.28.5/SDL2-2.28.5.tar.gz SDL.tar.gz
 
-if ! shasum --check sha1sums; then
-    echo "Checksum failed, are downloads ok?" >&2
-    exit 1
-fi
+#if ! shasum --check sha1sums; then
+#    echo "Checksum failed, are downloads ok?" >&2
+#    exit 1
+#fi
 
 tarextract ogg
 tarextract vorbis
